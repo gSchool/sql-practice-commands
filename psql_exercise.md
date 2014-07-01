@@ -17,7 +17,7 @@
 
 ## Creating a Database
 
-Most database products have the notion of separate databases.  Lets create one for the lesson.  In your terminal, type ```psql```.  Next create a database:
+Click on the elephant in the top right corner of the page to open the postgres menu. Click "open psql" to open a psql terminal window. Insert the following commands in the psql terminal window. To close the window
 
 ```
 CREATE DATABASE testdb
@@ -158,14 +158,14 @@ CREATE TABLE students (
 SELECT * FROM students;
 ```
 
-We may not want all attribues though.  Let's say instead we only care about the name and email of the student.  Here is the query we'd use:
+We can specify which attributes we want.  If we only want the name and email of the student.  Here is the query we'd use:
 
 ```
-SELECT name, email FROM students
+SELECT name, email FROM students;
 ```
+### Apply a filter with WHERE clause:
 
-
-This will select the name and email from students table where the name = "Spencer Eldred". 
+This will select the name and email from students table **WHERE the name = "Spencer Eldred"**. 
 
 ```
 SELECT name, email FROM students WHERE name = 'Spencer Eldred';
@@ -176,13 +176,13 @@ You can also have more complex queries to get data.  You can use boolean AND and
 ```
 SELECT name, email FROM students WHERE name = 'Spencer Eldred' OR email = 'hunter@galvanize.it';
 ```
-You can order your results by using "ORDER BY": "DESC" - decending, "ASC" - ascending.
+You can order your results by using **ORDER BY**: **DESC** - decending, **ASC** - ascending.
 
 ```
 SELECT name, email FROM students ORDER BY name DESC;
 ```
 
-Your list could get really long if there were many students. We can limit the size of the list by using "LIMIT".  Let's instead only get the top 5 movies that are returned using LIMIT:
+Your list could get really long if there were many students. We can limit the size of the list by using **LIMIT**.  Let's instead only get the first name and email by using **LIMIT 1**:
 
 ```
 SELECT name, email FROM students ORDER BY name DESC LIMIT 1;
@@ -192,7 +192,7 @@ SELECT name, email FROM students ORDER BY name DESC LIMIT 1;
 
 The update statement is defined [UPDATE doc](http://www.postgresql.org/docs/9.3/static/sql-update.html) in the postgres docs.  It is used to change existing data in our database.
 
-For example, if we want to change the phone number for Spencer:
+For example, use **UPDATE** if you want to change the phone number for Spencer:
 
 ```
 UPDATE students SET phone_no='222-1234' WHERE name='Spencer Eldred';
@@ -202,7 +202,7 @@ UPDATE students SET phone_no='222-1234' WHERE name='Spencer Eldred';
 
 Deleting works similarly to a select statement.  Here are the [DELETE doc](http://www.postgresql.org/docs/9.3/static/sql-delete.html)
 
-The statement below deletes a specific row from the database students (WHERE name='Spencer Eldred'):
+The statement below uses **DELETE** to destroy a specific row from the database students (WHERE name='Spencer Eldred'):
 
 ```
 DELETE FROM students WHERE name='Spencer Eldred';
