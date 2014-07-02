@@ -17,7 +17,7 @@
 
 ## Creating a Database
 
-Click on the elephant in the top right corner of the page to open the postgres menu. Click "open psql" to open a psql terminal window. Insert the following commands in the psql terminal window. To close the window
+Click on the elephant in the top right corner of the page to open the postgres menu. Click "open psql" to open a psql terminal window. Insert the following commands in the psql terminal window. To close the window: \q.
 
 ```
 CREATE DATABASE testdb;
