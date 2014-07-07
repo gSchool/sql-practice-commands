@@ -120,8 +120,6 @@ INSERT INTO instructors (name, phone_no, email) VALUES ('Jeff Taggart', '987-654
 
 INSERT INTO instructors (name, phone_no, email) VALUES ('Hunter Gillane', '567-1234', 'hunter@galvanize.it');
 ```
-Here is our movies table schema:
-
 
 Our new row of data will look something like this:
 
